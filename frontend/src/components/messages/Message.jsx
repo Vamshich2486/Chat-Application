@@ -1,4 +1,5 @@
-import { useAuthContext } from "../../context/authContext";
+
+import { useAuthContext } from "../../context/AuthContext";
 import { extractTime } from "../../utils/extractTime";
 import useConversation from "../../zustand/useConversation";
 
