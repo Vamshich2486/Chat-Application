@@ -1,3 +1,4 @@
+import path from "path";
 import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
@@ -8,6 +9,7 @@ import connectToMongoDB from "./db/connectToMongoDB.js";
 import { app, server } from "./socket/socket.js";
 
 
+const __dirname = path.resolve();
 
 dotenv.config();
 
@@ -21,10 +23,11 @@ app.use("/api/auth",authRoutes)
 app.use("/api/message",messageRoutes)
 app.use("/api/users",userRoutes);
 
-// app.get("/",(req,res)=> {
-//     //root route http://localhost:4000/
-//     res.send("hello! world");
-// });
+app.use(express.static(path.join(__dirname,"/frontend/dist")))
+
+app.get("*",(req,res) => {
+    res.sendFile(path.join(__dirname,"/frontend","dist","index.html"))
+})
 
 
 
