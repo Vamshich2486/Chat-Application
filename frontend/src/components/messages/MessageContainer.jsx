@@ -2,7 +2,7 @@ import useConversation from "../../zustand/useConversation";
 import MessageInput from "./MessageInput"
 import Messages from "./Messages"
 import { useEffect } from "react";
-import { useAuthContext} from "../../context/authContext";
+import { useAuthContext} from "../../context/AuthContext";
 
 
 const MessageContainer = () => {
