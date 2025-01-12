@@ -7,11 +7,13 @@ import userRoutes from "./routes/user.routes.js";
 import messageRoutes from "./routes/message.routes.js";
 import connectToMongoDB from "./db/connectToMongoDB.js";
 import { app, server } from "./socket/socket.js";
-
+import cors from "cors";
 
 const __dirname = path.resolve();
 
 dotenv.config();
+
+app.use(cors());
 
 const PORT = process.env.PORT || 4000;
 
