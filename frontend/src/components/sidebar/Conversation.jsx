@@ -17,7 +17,8 @@ const isOnline = onlineUsers.includes(conversation._id)
  				<div className={`avatar ${isOnline ? "online" : ""}`}>
  					<div className='w-12 rounded-full'>
  						<img
- 							src={conversation.profilePic}
+ 							src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?t=st=1736674799~exp=1736678399~hmac=971ff5f96a0571d0e9a96f95c5b4c27c54cba7c4b35adaaa2f90e8752136b68f&w=740"
+							style={{height:"48px" ,width:"48px"}}
  							alt='user avatar'
  						/>
  					</div>
